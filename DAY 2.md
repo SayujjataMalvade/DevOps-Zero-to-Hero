@@ -1,34 +1,138 @@
-What is SDLC?
+# Software Development Life Cycle (SDLC)
 
-The Software Development Life Cycle (SDLC) is a standardized process followed by organizations to ensure efficient and high-quality delivery of products to end users. It provides a structured framework for planning, creating, testing, and deploying software.
+## What is SDLC?
 
-Example:
-Consider an e-commerce website (e.g., example.com) that currently has two sections: Male and Female. The owner decides to add a new Children section. The SDLC stages for implementing this change would be:
+The **Software Development Life Cycle (SDLC)** is a standardized process
+used by organizations to ensure efficient and high-quality delivery of
+software products.
+It provides a structured framework for **planning, creating, testing,
+and deploying** applications.
 
-1.Planning & Requirements:
+------------------------------------------------------------------------
 
-Define the goal — adding a Children section. Conduct research to understand customer demand, such as interest in different age groups. Planning is done based on these insights.
+## 📘 Example Scenario
 
-2.Definition:
+Consider an e-commerce website (*example.com*) with sections **Male**
+and **Female**. The owner wants to add a new **Children** section.
+Below are the SDLC stages involved:
 
-Document detailed requirements, such as the specific age ranges (e.g., 1–4 years, 6–12 years). These documents guide development decisions.
+------------------------------------------------------------------------
 
-3.Design:
+## 1. Planning & Requirements
 
-Developers prepare both high-level and low-level designs.
+``` mermaid
+flowchart TD
+    A[Identify Need] --> B[Research & Analysis]
+    B --> C[Define Goal: Add Children Section]
+    C --> D[Plan Resources & Timeline]
+```
 
-High-Level Design (HLD): Overall system architecture, scalability planning (e.g., load balancers, auto-scaling, replica sets).
+------------------------------------------------------------------------
 
-Low-Level Design (LLD): Detailed implementation steps and component-specific design.
+## 2. Definition
 
-4.Testing:
+Document all detailed requirements such as: - Age categories
+- Product types
+- UI modifications
 
-The QA team tests the developed code to ensure it meets requirements and is bug-free. The tested code is stored in a distributed version control system (e.g., Git, GitHub).
+------------------------------------------------------------------------
 
-5.Deployment:
+## 3. Design
 
-Once approved, the application is deployed to the production server for end users.
+### High-Level & Low-Level Designs
 
-DevOps in SDLC
+``` mermaid
+flowchart LR
+    HLD[High Level Design] --> LLD[Low Level Design]
+    HLD --> SYS[System Architecture]
+    LLD --> IMP[Implementation Steps]
+```
 
-A DevOps Engineer plays a key role in automating the Build, Test, and Deploy stages of the SDLC, ensuring faster, more reliable, and more efficient delivery of applications to end users.
+------------------------------------------------------------------------
+
+## 4. Testing
+
+``` mermaid
+flowchart TD
+    A[Developed Code] --> B[QA Testing]
+    B --> C{Bug Found?}
+    C -->|Yes| A
+    C -->|No| D[Ready for Deployment]
+```
+
+------------------------------------------------------------------------
+
+## 5. Deployment
+
+Deployed to production after verification.
+
+------------------------------------------------------------------------
+
+# 🔥 Additional Diagrams
+
+## Agile vs Waterfall Model
+
+``` mermaid
+flowchart LR
+    subgraph Waterfall
+        A1[Requirement] --> B1[Design] --> C1[Development] --> D1[Testing] --> E1[Deployment]
+    end
+
+    subgraph Agile
+        S1[Sprint 1] --> S2[Sprint 2] --> S3[Sprint 3]
+        S1 --> A2[Plan/Design/Develop/Test]
+        S2 --> B2[Plan/Design/Develop/Test]
+        S3 --> C2[Plan/Design/Develop/Test]
+    end
+```
+
+------------------------------------------------------------------------
+
+## CI/CD Lifecycle Diagram
+
+``` mermaid
+flowchart LR
+    A[Code Commit] --> B[CI: Build]
+    B --> C[CI: Test]
+    C --> D[CD: Deploy to Staging]
+    D --> E[Approval/Automation]
+    E --> F[Deploy to Production]
+```
+
+------------------------------------------------------------------------
+
+## DevOps Tools Flow
+
+``` mermaid
+flowchart LR
+    Dev[Developer] --> Git[Git/GitHub]
+    Git --> CI[CI Server: Jenkins/GitHub Actions]
+    CI --> Cont[Container Build: Docker]
+    Cont --> Orch[Kubernetes Deployment]
+    Orch --> Mon[Monitoring: Prometheus/Grafana]
+    Mon --> Alert[Alerting: Slack / Email]
+```
+
+------------------------------------------------------------------------
+
+# DevOps in SDLC
+
+A **DevOps Engineer** automates: - Build
+- Test
+- Deployment
+- Monitoring
+
+### Automation Pipeline
+
+``` mermaid
+flowchart LR
+    A[Code Commit] --> B[Build Automation]
+    B --> C[Test Automation]
+    C --> D[Deploy Automation]
+    D --> E[Monitoring & Feedback]
+```
+
+------------------------------------------------------------------------
+
+This document now includes SDLC explanation plus **Agile vs Waterfall**,
+**CI/CD**, and **DevOps Tools** diagrams.
