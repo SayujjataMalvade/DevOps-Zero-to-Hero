@@ -18,7 +18,7 @@
 
     git commit -m <message>
 
-🔹 5. Configure Git user details
+🔹 5. Configure Git user details in local
 
     git config --global user.name
 
