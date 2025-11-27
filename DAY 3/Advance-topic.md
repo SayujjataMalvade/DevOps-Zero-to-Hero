@@ -1,9 +1,5 @@
 # Git Branching, Merge, Rebase, Revert & Reset
 
-Below is a combined and professionally formatted Markdown file containing **all your provided content** + the newly written **Merge & Merge Conflict Explanation**.
-
----
-
 # Branching Strategies in Git
 
 ## Branch Types
