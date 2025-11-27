@@ -134,5 +134,3 @@ flowchart LR
 
 ------------------------------------------------------------------------
 
-This document now includes SDLC explanation plus **Agile vs Waterfall**,
-**CI/CD**, and **DevOps Tools** diagrams.
